@@ -1,0 +1,291 @@
+import { Property } from './types'
+
+export const mockProperties: Property[] = [
+  // United States Properties
+  {
+    id: '1',
+    title: 'Modern Downtown Apartment',
+    description: 'Beautiful 2-bedroom apartment in the heart of downtown with stunning city views and modern amenities.',
+    price: 2500,
+    property_type: 'rent',
+    bedrooms: 2,
+    bathrooms: 2,
+    area_sqft: 1200,
+    address: '123 Main St',
+    city: 'New York',
+    state: 'NY',
+    zip_code: '10001',
+    images: [
+      'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800&h=600&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop&crop=center'
+    ],
+    amenities: ['Gym', 'Pool', 'Parking', 'Balcony'],
+    status: 'active',
+    user_id: 'user1',
+    created_at: '2024-01-01',
+    updated_at: '2024-01-01'
+  },
+  {
+    id: '2',
+    title: 'Luxury Family Home',
+    description: 'Spacious 4-bedroom family home with large backyard, perfect for families looking for comfort and space.',
+    price: 750000,
+    property_type: 'sale',
+    bedrooms: 4,
+    bathrooms: 3,
+    area_sqft: 2800,
+    address: '456 Oak Avenue',
+    city: 'Los Angeles',
+    state: 'CA',
+    zip_code: '90210',
+    images: [
+      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop&crop=center'
+    ],
+    amenities: ['Garden', 'Garage', 'Fireplace', 'Pool'],
+    status: 'active',
+    user_id: 'user2',
+    created_at: '2024-01-02',
+    updated_at: '2024-01-02'
+  },
+  {
+    id: '3',
+    title: 'Cozy Studio Loft',
+    description: 'Charming studio loft in trendy neighborhood, perfect for young professionals or students.',
+    price: 1800,
+    property_type: 'rent',
+    bedrooms: 1,
+    bathrooms: 1,
+    area_sqft: 600,
+    address: '789 Creative St',
+    city: 'San Francisco',
+    state: 'CA',
+    zip_code: '94102',
+    images: [
+      'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1536376072261-38c75010e6c9?w=800&h=600&fit=crop&crop=center'
+    ],
+    amenities: ['High Ceilings', 'Exposed Brick', 'Modern Kitchen'],
+    status: 'active',
+    user_id: 'user3',
+    created_at: '2024-01-03',
+    updated_at: '2024-01-03'
+  },
+  {
+    id: '4',
+    title: 'Suburban Dream House',
+    description: 'Perfect family home in quiet suburban neighborhood with excellent schools nearby.',
+    price: 425000,
+    property_type: 'sale',
+    bedrooms: 3,
+    bathrooms: 2,
+    area_sqft: 2200,
+    address: '321 Maple Drive',
+    city: 'Austin',
+    state: 'TX',
+    zip_code: '78701',
+    images: [
+      'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=800&h=600&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop&crop=center'
+    ],
+    amenities: ['Garden', 'Garage', 'Patio', 'Storage'],
+    status: 'active',
+    user_id: 'user4',
+    created_at: '2024-01-04',
+    updated_at: '2024-01-04'
+  },
+  {
+    id: '5',
+    title: 'Beachfront Condo',
+    description: 'Stunning oceanfront condominium with panoramic views and beach access.',
+    price: 3200,
+    property_type: 'rent',
+    bedrooms: 2,
+    bathrooms: 2,
+    area_sqft: 1400,
+    address: '555 Ocean Boulevard',
+    city: 'Miami',
+    state: 'FL',
+    zip_code: '33139',
+    images: [
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop&crop=center'
+    ],
+    amenities: ['Ocean View', 'Beach Access', 'Pool', 'Gym'],
+    status: 'active',
+    user_id: 'user5',
+    created_at: '2024-01-05',
+    updated_at: '2024-01-05'
+  },
+  {
+    id: '6',
+    title: 'Historic Brownstone',
+    description: 'Beautifully restored 19th-century brownstone with original details and modern updates.',
+    price: 1200000,
+    property_type: 'sale',
+    bedrooms: 4,
+    bathrooms: 3,
+    area_sqft: 3200,
+    address: '88 Heritage Lane',
+    city: 'Boston',
+    state: 'MA',
+    zip_code: '02101',
+    images: [
+      'https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=800&h=600&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=600&fit=crop&crop=center'
+    ],
+    amenities: ['Historic Details', 'Fireplace', 'Garden', 'Parking'],
+    status: 'active',
+    user_id: 'user6',
+    created_at: '2024-01-06',
+    updated_at: '2024-01-06'
+  },
+  // Canada Properties
+  {
+    id: '7',
+    title: 'Toronto Condo with CN Tower View',
+    description: 'Modern 2-bedroom condo in downtown Toronto with stunning CN Tower views and premium amenities.',
+    price: 3200,
+    property_type: 'rent',
+    bedrooms: 2,
+    bathrooms: 2,
+    area_sqft: 1100,
+    address: '100 Front St W',
+    city: 'Toronto',
+    state: 'Ontario',
+    zip_code: 'M5J 1E3',
+    images: [
+      'https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&h=600&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop&crop=center'
+    ],
+    amenities: ['Gym', 'Pool', 'Concierge', 'Balcony'],
+    status: 'active',
+    user_id: 'user7',
+    created_at: '2024-01-07',
+    updated_at: '2024-01-07'
+  },
+  {
+    id: '8',
+    title: 'Vancouver Mountain View Home',
+    description: 'Spectacular family home with mountain and ocean views in prestigious Vancouver neighborhood.',
+    price: 2800000,
+    property_type: 'sale',
+    bedrooms: 5,
+    bathrooms: 4,
+    area_sqft: 4200,
+    address: '777 Mountain View Drive',
+    city: 'Vancouver',
+    state: 'British Columbia',
+    zip_code: 'V6G 1A1',
+    images: [
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop&crop=center'
+    ],
+    amenities: ['Mountain View', 'Ocean View', 'Garden', 'Garage'],
+    status: 'active',
+    user_id: 'user8',
+    created_at: '2024-01-08',
+    updated_at: '2024-01-08'
+  },
+  // United Kingdom Properties
+  {
+    id: '9',
+    title: 'London Victorian Townhouse',
+    description: 'Beautiful 3-bedroom Victorian townhouse in prime London location with period features and modern updates.',
+    price: 850000,
+    property_type: 'sale',
+    bedrooms: 3,
+    bathrooms: 2,
+    area_sqft: 1800,
+    address: '45 Kensington Gardens',
+    city: 'London',
+    state: 'England',
+    zip_code: 'W2 4BA',
+    images: [
+      'https://images.unsplash.com/photo-1513584684374-8bab748fbf90?w=800&h=600&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=800&h=600&fit=crop&crop=center'
+    ],
+    amenities: ['Garden', 'Fireplace', 'Period Features', 'Parking'],
+    status: 'active',
+    user_id: 'user9',
+    created_at: '2024-01-09',
+    updated_at: '2024-01-09'
+  },
+  {
+    id: '10',
+    title: 'Edinburgh Castle View Flat',
+    description: 'Charming 2-bedroom flat with stunning castle views in historic Edinburgh.',
+    price: 2200,
+    property_type: 'rent',
+    bedrooms: 2,
+    bathrooms: 1,
+    area_sqft: 950,
+    address: '12 Royal Mile',
+    city: 'Edinburgh',
+    state: 'Scotland',
+    zip_code: 'EH1 2PB',
+    images: [
+      'https://images.unsplash.com/photo-1513584684374-8bab748fbf90?w=800&h=600&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=800&h=600&fit=crop&crop=center'
+    ],
+    amenities: ['Castle View', 'Historic Location', 'Central Heating'],
+    status: 'active',
+    user_id: 'user10',
+    created_at: '2024-01-10',
+    updated_at: '2024-01-10'
+  },
+  // Australia Properties
+  {
+    id: '11',
+    title: 'Sydney Harbour Apartment',
+    description: 'Luxury 2-bedroom apartment with Sydney Harbour views, perfect for professionals or investors.',
+    price: 4500,
+    property_type: 'rent',
+    bedrooms: 2,
+    bathrooms: 2,
+    area_sqft: 1300,
+    address: '88 Circular Quay',
+    city: 'Sydney',
+    state: 'New South Wales',
+    zip_code: '2000',
+    images: [
+      'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&h=600&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1600047509358-9dc75507daeb?w=800&h=600&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1600047509782-20d39509f26d?w=800&h=600&fit=crop&crop=center'
+    ],
+    amenities: ['Harbour Views', 'Gym', 'Pool', 'Concierge'],
+    status: 'active',
+    user_id: 'user11',
+    created_at: '2024-01-11',
+    updated_at: '2024-01-11'
+  },
+  {
+    id: '12',
+    title: 'Melbourne Arts District Loft',
+    description: 'Contemporary loft in vibrant arts district with high ceilings and industrial features.',
+    price: 680000,
+    property_type: 'sale',
+    bedrooms: 2,
+    bathrooms: 2,
+    area_sqft: 1600,
+    address: '234 Flinders Lane',
+    city: 'Melbourne',
+    state: 'Victoria',
+    zip_code: '3000',
+    images: [
+      'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&h=600&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop&crop=center'
+    ],
+    amenities: ['High Ceilings', 'Industrial Features', 'Rooftop Access'],
+    status: 'active',
+    user_id: 'user12',
+    created_at: '2024-01-12',
+    updated_at: '2024-01-12'
+  }
+]

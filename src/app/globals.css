@@ -22,5 +22,315 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  scroll-behavior: smooth;
 }
+
+/* Custom component classes with modern cool color palette */
+.btn-primary {
+  @apply bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl border border-amber-400/20 hover:border-amber-400/40;
+}
+
+.btn-secondary {
+  @apply bg-white hover:bg-slate-50 text-slate-900 font-semibold py-3 px-8 rounded-lg border border-slate-300 transition-all duration-300 shadow-md hover:shadow-lg;
+}
+
+.btn-gold {
+  @apply bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-slate-900 font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-lg border border-slate-200/50 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:border-amber-400/20;
+}
+
+.input-field {
+  @apply w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 transition-all duration-200 bg-white;
+}
+
+.luxury-gradient {
+  @apply bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900;
+}
+
+.glass-effect {
+  @apply bg-white/95 backdrop-blur-md border border-slate-200/30;
+}
+
+/* Custom dropdown styling for better visibility */
+select {
+  @apply appearance-none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+
+/* Ensure dropdowns are above other elements */
+.location-dropdown {
+  position: relative;
+  z-index: 50;
+}
+
+.location-dropdown select {
+  @apply w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 bg-white text-slate-900 font-medium;
+  min-height: 48px;
+}
+
+/* Search with dropdown styling */
+.search-with-dropdown-home input {
+  @apply w-full px-6 py-4 bg-amber-50 border border-slate-300 rounded-xl text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 transition-all duration-300 text-lg;
+}
+
+.search-with-dropdown-properties input {
+  @apply w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent bg-white text-slate-900;
+}
+
+/* Enhanced navigation icon animations */
+@keyframes iconBounce {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(6deg); }
+}
+
+@keyframes iconGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+  50% { box-shadow: 0 0 20px 5px rgba(245, 158, 11, 0.3); }
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+.nav-icon-hover:hover {
+  animation: iconBounce 0.6s ease-in-out;
+}
+
+.nav-icon-glow:hover {
+  animation: iconGlow 1s ease-in-out infinite;
+}
+
+.nav-icon-pulse:hover {
+  animation: iconPulse 1s ease-in-out infinite;
+}
+
+/* Navigation helper animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Modal and overlay styles */
+.modal-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1rem !important;
+  overflow-y: auto !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.modal-content {
+  position: relative !important;
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+  margin: 2rem auto !important;
+  background: white !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Prevent body scroll when modal is open */
+body.modal-open {
+  overflow: hidden !important;
+}
+
+/* Ensure modal portal renders correctly */
+.modal-portal {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 9999 !important;
+  pointer-events: none;
+}
+
+.modal-portal > * {
+  pointer-events: auto;
+}
+
+.location-dropdown select:focus {
+  @apply ring-2 ring-amber-400 border-amber-400;
+  z-index: 60;
+}
+
+/* Custom scrollbar for better UX */
+select {
+  scrollbar-width: thin;
+  scrollbar-color: #f59e0b #f1f5f9;
+}
+
+select::-webkit-scrollbar {
+  width: 8px;
+}
+
+select::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+select::-webkit-scrollbar-thumb {
+  background: #f59e0b;
+  border-radius: 4px;
+}
+
+select::-webkit-scrollbar-thumb:hover {
+  background: #d97706;
+}
+
+/* Spinner animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Specific styling for location dropdown selects */
+.location-dropdown-select {
+  @apply w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 bg-white text-slate-900 font-medium shadow-sm hover:border-slate-400 transition-all duration-200;
+  min-height: 48px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.location-dropdown-select:focus {
+  @apply ring-2 ring-amber-400 border-amber-400 shadow-md;
+  z-index: 60;
+}
+
+/* Ensure dropdown options are properly styled */
+.location-dropdown-select option {
+  @apply py-2 px-4 text-slate-900 bg-white;
+  min-height: 40px;
+  line-height: 1.5;
+  color: #1e293b !important;
+  background-color: #ffffff !important;
+}
+
+.location-dropdown-select option:hover {
+  @apply bg-amber-50;
+  background-color: #fffbeb !important;
+}
+
+.location-dropdown-select option:checked {
+  @apply bg-amber-100 text-amber-900 font-medium;
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+}
+
+/* Fix for all select dropdowns */
+select option {
+  color: #1e293b !important;
+  background-color: #ffffff !important;
+  padding: 8px 12px;
+}
+
+select option:hover {
+  background-color: #f8fafc !important;
+}
+
+select option:checked {
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+  font-weight: 500;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 640px) {
+  .location-dropdown-select {
+    @apply text-base;
+    min-height: 44px;
+  }
+}
+
+/* Tour System Animations */
+@keyframes tourSpotlight {
+  0% {
+    box-shadow: 0 0 0 4px rgba(251, 191, 36, 0.3), 0 0 0 9999px rgba(0, 0, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(251, 191, 36, 0.5), 0 0 0 9999px rgba(0, 0, 0, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 0 4px rgba(251, 191, 36, 0.3), 0 0 0 9999px rgba(0, 0, 0, 0.7);
+  }
+}
+
+@keyframes tourTooltipSlide {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tourProgress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--progress-width);
+  }
+}
+
+.tour-spotlight {
+  animation: tourSpotlight 2s ease-in-out infinite;
+}
+
+.tour-tooltip {
+  animation: tourTooltipSlide 0.3s ease-out;
+}
+
+.tour-progress-bar {
+  animation: tourProgress 0.5s ease-out;
+}
+
+/* Tour launcher animations */
+@keyframes tourLauncherPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(245, 158, 11, 0);
+  }
+}
+
+.tour-launcher-pulse {
+  animation: tourLauncherPulse 2s infinite;
+}
+
+
